@@ -6,6 +6,10 @@ Invoked with: python -m src.repl
 from __future__ import annotations
 
 import sys
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from src.models.session import Session, SessionContext
 from src.models.trace import Tracer

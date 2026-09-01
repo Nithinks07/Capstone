@@ -1,5 +1,6 @@
 """Instrumented LLM wrapper: captures token counts, cost, and retries per ADR-0002."""
 
+import os
 import time
 from typing import Any, Optional
 
@@ -29,7 +30,12 @@ def instrumented_llm_call(
         Dict with keys: content, input_tokens, output_tokens, cached_tokens, cost, retries, model_id.
     """
     if client is None:
-        client = anthropic.Anthropic()
+        # Initialize client with workspace ID if available
+        workspace_id = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+        if workspace_id:
+            client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"), default_headers={"anthropic-workspace-id": workspace_id})
+        else:
+            client = anthropic.Anthropic()
 
     prices = load_model_prices()
     model_prices = prices.get(model_id, {"input_price_per_token": 0.0, "output_price_per_token": 0.0})

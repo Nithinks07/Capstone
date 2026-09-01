@@ -7,6 +7,10 @@ from pathlib import Path
 from typing import Callable, Optional
 
 import yaml
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from src.evaluation.judge import score as judge_score
 from src.infra.llm import instrumented_llm_call

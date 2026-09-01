@@ -111,12 +111,13 @@ def test_runner_cli_exits_zero_on_empty_cases(tmp_path):
     """CLI entry point exits 0 when the cases directory is empty (no LLM calls needed)."""
     import subprocess
     import sys
+    import os
 
     result = subprocess.run(
         [sys.executable, "-m", "src.evaluation.runner", "--cases", str(tmp_path)],
         capture_output=True,
         text=True,
-        cwd="/Users/jay/Documents/Cybersecurity_Policy_Agent",
+        cwd=os.getcwd(),
     )
     assert result.returncode == 0
     assert '"total": 0' in result.stdout
