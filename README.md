@@ -29,8 +29,8 @@ An AI agent that evaluates employee helpdesk requests against a written security
 
 ```bash
 # 1. Clone and enter the repo
-git clone <repo-url>
-cd Cybersecurity_Policy_Agent
+git clone https://github.com/Nithinks07/Capstone.git
+cd Capstone
 
 # 2. Install dependencies
 pip install -r requirements.txt
