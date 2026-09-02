@@ -1,0 +1,27 @@
+# Environment & Secret variables
+.env
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Ignored / Archived folder
+not-required/
+
+# Testing & Cache
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Runtime DB & Logs
+pipeline.log
+rate_limits.db
+
+# IDE & OS Metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -8,7 +8,7 @@ def test_lookup_employee_strips_personal_email():
     raw = {
         "employee_id": "alice",
         "name": "Alice Smith",
-        "work_email": "alice@gaggia.com",
+        "work_email": "alice@example.com",
         "personal_email": "alice@gmail.com",
     }
     result = filter_output("lookup_employee", raw, tracer=None)
@@ -41,7 +41,7 @@ def test_lookup_employee_keeps_safe_fields():
     raw = {
         "employee_id": "alice",
         "name": "Alice Smith",
-        "work_email": "alice@gaggia.com",
+        "work_email": "alice@example.com",
         "work_phone": "555-0100",
         "office_location": "London",
         "personal_email": "alice@gmail.com",
@@ -51,7 +51,7 @@ def test_lookup_employee_keeps_safe_fields():
     result = filter_output("lookup_employee", raw, tracer=None)
     assert result["employee_id"] == "alice"
     assert result["name"] == "Alice Smith"
-    assert result["work_email"] == "alice@gaggia.com"
+    assert result["work_email"] == "alice@example.com"
     assert result["work_phone"] == "555-0100"
     assert result["office_location"] == "London"
 

@@ -50,7 +50,7 @@ def test_chunk_carries_tags_from_parent_section():
 # Retriever tests (uses real ChromaDB + sentence-transformers in-process)
 # ---------------------------------------------------------------------------
 
-POLICY_PATH = "gaggia_helpdesk_policy.md"
+POLICY_PATH = "helpdesk_policy.md"
 
 
 @pytest.fixture(scope="module")

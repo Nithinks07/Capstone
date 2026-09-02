@@ -1,4 +1,4 @@
-"""REPL entry point: interactive loop for the Gaggia Helpdesk Policy Agent.
+"""REPL entry point: interactive loop for the Helpdesk Policy Agent.
 
 Invoked with: python -m src.repl
 """
@@ -16,7 +16,7 @@ from src.models.trace import Tracer
 from src.pipeline.pipeline import Pipeline, PipelineResult
 
 _GREETING = (
-    "Gaggia Helpdesk Policy Agent\n"
+    "Helpdesk Policy Agent\n"
     "I evaluate requests against company security policy.\n"
     "Type your request and press Enter. Type 'quit' or press Ctrl-D to exit.\n"
 )
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     from src.tools.escalate_to_human import escalate_to_human
     import pathlib
 
-    policy_text = pathlib.Path("gaggia_helpdesk_policy.md").read_text()
+    policy_text = pathlib.Path("helpdesk_policy.md").read_text()
     retriever = ChromaDBRetriever.from_policy_text(policy_text)
     registry = {
         "reset_password": reset_password,

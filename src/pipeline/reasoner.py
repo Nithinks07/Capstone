@@ -19,7 +19,7 @@ _TOOL_REGISTRY = [
 ]
 
 _AGENT_ROLE = (
-    "You are a cybersecurity policy agent for the Gaggia Helpdesk. "
+    "You are a cybersecurity policy agent for the Helpdesk. "
     "Your role is to evaluate employee requests against company security policy "
     "and produce a structured JSON decision. You must cite policy section IDs to support every decision."
 )
