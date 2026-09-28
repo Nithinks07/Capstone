@@ -10,7 +10,7 @@
 | 1 | **Jayakeerthan S G** | **PES1UG23CS262** | **pes1ug23cs262@pesu.pes.edu** |
 | 2 | **Nithin K S** | **PES1UG23AM195** | **pes1ug23am195@pesu.pes.edu** |
 | 3 | **Nikhil P S** | **PES1UG23AM191** | **pes1ug23am191@pesu.pes.edu** |
-| 4 | **Narayana S** | **PES1UG23AM179** | **pes1ug23am195@pesu.pes.edu** |
+| 4 | **Narayana S** | **PES1UG23AM179** | **pes1ug23am179@pesu.pes.edu** |
 
 ---
 
